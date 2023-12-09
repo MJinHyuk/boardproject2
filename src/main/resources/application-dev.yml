@@ -4,9 +4,9 @@ server:
 spring:
   # 데이터베이스 설정
   datasource:
-    driverClassName: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521:orcl
-    username: PROJECT
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/project
+    username: project
     password: _aA123456
 
   # JPA 설정
@@ -18,7 +18,7 @@ spring:
         show_sql: true
         format_sql: true
         use_sql_comments: true
-        dialect: org.hibernate.dialect.OracleDialect
+        dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddlAuto: update
 
